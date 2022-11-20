@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nei {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        body {
+            background-color: pink;
+        }
+        
+        #box {
+            width: 260px;
+            height: 500px;
+            background: rgba(254, 251, 251, 0.4);
+            border-radius: 15px;
+        }
+        
+        ul li {
+            list-style: none;
+            width: 260px;
+            height: 55px;
+            text-align: center;
+            line-height: 55px;
+            font-size: 18px;
+            padding-top: 20px;
+        }
+        
+        button {
+            width: 200px;
+            height: 45px;
+            background-color: aqua;
+            border-radius: 15px;
+        }
+        
+        button:hover {
+            background-color: antiquewhite;
+        }
+        
+        #nei {
+            text-align: center;
+            font-size: 30px;
+            padding-top: 20px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最幸运的人</title>
+</head>
+
+<body>
+    <h3 id="nei">计算机应用技术2104</h3>
+    <div class="nei">
+        <div id="box">
+            <ul>
+                <li>
+                    <h2>最幸运的人</h2>
+
+
+                </li>
+                <li>
+                    <button onclick="getRandom()">查看最幸运的人</button>
+                </li>
+                <li>
+                    <h2 id="xinyun"></h2>
+
+                </li>
+                <li>
+                    <h4>点到名的是</h4>
+                </li>
+                <li id="xinyun"></li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <script>
+        function getRandom() {
+            let num = Math.floor(Math.random() * 30);
+            var arr = ['王阳', '章道宏', '徐豪', '刘壮壮', '张凯迪', '袁凯', '张君豪',
+                '梁家乐', '高梦杰', '王家新', '吴雨泽', '王硕', '张辉', '孔文博', '罗梦洋', '刘丰豪',
+                '张志豪', '张强', '赵成宇', '刘东浩', '葛健康', '宋浩', '李福成', '张浩宇', '盖震堂',
+                '李向阳', '贺清正', '耿佳政', '朱治业', '王朕', '李娜'
+            ];
+            document.getElementById("xinyun").innerHTML = arr[num];
+        }
+    </script>
+
+</body>
+
+</html>
